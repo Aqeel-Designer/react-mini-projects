@@ -16,13 +16,14 @@ function DigitalClock(){
     },
     [])
 
-    function formatTime(){
-        let hours = time.getHours();
-        hours = hours % 12 || 12;
+    function formatTime() {
+        const originalHours = time.getHours();
+        let hours = originalHours % 12 || 12;
+
         const minutes = time.getMinutes();
         const seconds = time.getSeconds();
 
-        const meridiem = hours >= 12 ? "PM" : "AM";
+        const meridiem = originalHours >= 12 ? "PM" : "AM";
 
         return `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)} ${meridiem}`;
     }

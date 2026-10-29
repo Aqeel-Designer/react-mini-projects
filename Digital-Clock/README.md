@@ -1,16 +1,62 @@
-# React + Vite
+# Digital Clock
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A simple digital clock built with React that displays the current time in a 12-hour format, including hours, minutes, seconds, and AM/PM.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Displays the current local time.
+- Updates automatically every second.
+- Uses a 12-hour time format with AM/PM.
+- Adds leading zeros to single-digit hours, minutes, and seconds.
+- Cleans up the interval when the component unmounts.
 
-## React Compiler
+## Technologies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- JavaScript
+- HTML5
+- CSS3
+- Vite
 
-## Expanding the Oxlint configuration
+## Concepts Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Functional Components
+- JSX
+- `useState`
+- `useEffect`
+- State Updates and Re-rendering
+- `setInterval()`
+- `clearInterval()`
+- JavaScript `Date` Object
+- Conditional Expressions
+- Template Literals
+- String Formatting
+- Component Export and Import
+
+## How It Works
+
+The application initializes its state with the current date and time using `useState`. The `useEffect` hook sets up an interval that updates the time every second, causing React to re-render the displayed clock.
+
+The `formatTime()` function converts the time into a 12-hour format, while `padZero()` ensures that single-digit values display with a leading zero. The interval is cleared when the component unmounts to prevent unnecessary background updates.
+
+## Getting Started
+
+1. Navigate to the project directory:
+
+   ```bash
+   cd Digital-Clock
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open the local URL provided by Vite in your browser.
