@@ -1,0 +1,222 @@
+/* Dark Theme Body */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #121214d5;
+  color: #f0f0f4;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main Container Card */
+.to-do-list {
+  background-color: #1e1e24be;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 520px;
+  text-align: center;
+  border: 1px solid #2d2d38;
+}
+
+.to-do-list h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 2rem;
+  letter-spacing: -0.5px;
+}
+
+/* Input Row */
+.to-do-list > div {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 14px 18px;
+  background-color: #2a2a35;
+  border: 1px solid #3d3d4e;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]::placeholder {
+  color: #8c8c9e;
+}
+
+input[type="text"]:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Add Task Button */
+.add-button {
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.add-button:hover {
+  background-color: #4f46e5;
+}
+
+.add-button:active {
+  transform: scale(0.97);
+}
+
+/* Task List */
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual Task Item Row */
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #80808a;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #333342;
+}
+
+/* Bigger Task Text */
+.task-text {
+  flex: 1;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #f1f1f6;
+  word-break: break-word;
+}
+
+/* Common Action Button Styles */
+.delete-button,
+.move-up-button,
+.move-down-button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Delete Button */
+.delete-button {
+  background-color: #ef4444;
+  color: white;
+  font-weight: 600;
+}
+
+.delete-button:hover {
+  background-color: #dc2626;
+}
+
+/* Up/Down Arrow Buttons */
+.move-up-button,
+.move-down-button {
+  background-color: #333342;
+  color: #ffffff;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.move-up-button:hover,
+.move-down-button:hover {
+  background-color: #444456;
+}
+
+.delete-button:active,
+.move-up-button:active,
+.move-down-button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Styles for Mobile Screens */
+@media (max-width: 600px) {
+  /* Prevent horizontal scrollbars and fix body padding */
+  body {
+    padding: 16px;
+  }
+
+  /* Shrink card padding so content fits comfortably */
+  .to-do-list {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  .to-do-list h1 {
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+  }
+
+  /* Compact input section */
+  .to-do-list > div {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  input[type="text"] {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+
+  .add-button {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  /* Adjust task item row for tight screens */
+  li {
+    padding: 10px 12px;
+    gap: 6px;
+  }
+
+  .task-text {
+    font-size: 1rem;
+  }
+
+  /* Action buttons scaling */
+  .delete-button,
+  .move-up-button,
+  .move-down-button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra small mobile adjustments */
+@media (max-width: 380px) {
+  /* Stack input and add button vertically if screen is extremely narrow */
+  .to-do-list > div {
+    flex-direction: column;
+  }
+
+  .add-button {
+    width: 100%;
+  }
+}
