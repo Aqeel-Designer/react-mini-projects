@@ -4,7 +4,7 @@ A simple and interactive To-Do List application built with React. It allows user
 
 ## Features
 
-- **Add Tasks:** Add new tasks using the input field or Enter key.
+- **Add Tasks:** Add new tasks using the input field or enter key.
 - **Delete Tasks:** Remove tasks from the list.
 - **Reorder Tasks:** Move tasks up or down using the arrow buttons.
 - **Automatic Saving:** Tasks are saved in Local Storage whenever the list changes.
